@@ -1,0 +1,141 @@
+.header {
+  height: 105px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: #810034;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff7dc;
+}
+
+.logo-img {
+  width: 70px;
+  height: 81px;
+}
+.top {
+  margin-top: 7px;
+}
+.top h2 {
+  margin-bottom: 2px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.top h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.list {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  color: #fff7dc;
+  gap: 38px;
+}
+.list a {
+  text-decoration: none;
+  color: #fff7dc;
+  font-size: 16.2px;
+}
+.jabatan {
+  margin: 50px 50px 50px 50px;
+  height: 500px;
+  width: 600px;
+}
+
+.up {
+  display: flex;
+  padding: 30px 50px;
+  align-items: center;
+}
+.pencari-bar {
+  margin: 20px 20px 20px 20px;
+  border-radius: 42px;
+  width: calc(fit-content+64px);
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pencarian-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  display: inline;
+}
+.row {
+  display: flex;
+  background-color: #fff;
+}
+
+.column {
+  flex: 40% 60%;
+}
+.galeri {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.galeri .box {
+  margin: 20px 20px 20px 20px;
+  border-radius: 15px;
+  width: calc(fit-content+10px);
+  padding: 15px 20px;
+  background-color: #7c6969;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.img-polda {
+  width: 180px;
+  height: 150px;
+  margin: 5px;
+}
+
+/*---------------footer--------------------*/
+.footer {
+  height: 170px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  align-items: last baseline;
+}
+.list-down {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nama-footer {
+  color: #fff;
+}
+.nama-footer h2 {
+  margin-bottom: 2px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.nama-footer h3 {
+  margin-bottom: 2px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.nama-footer h5 {
+  margin-bottom: 2px;
+  font-size: 0.7em;
+  font-weight: bold;
+}

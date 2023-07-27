@@ -42,19 +42,29 @@ const Login = () => {
                      rules={[{ required: true, message: "Harap isi email anda" },
                      { type: "email", message: "Email tidak valid" }]}
                   >
-                     <Input />
+                     <Input className="form-input" />
                   </Form.Item>
                   <Form.Item name="password" label="Password"
                      rules={[{ required: true, message: "Harap isi password anda" }]}
                   >
-                     <Input.Password />
+                     <Input.Password className="form-input" />
                   </Form.Item>
                   <div className="btn-container">
-                     <Button htmlType="submit" className="btn-login" loading={isLoading}>Login</Button>
+                     <Button htmlType="submit" className="btn-login" loading={isLoading}>Masuk</Button>
                   </div>
                </Form>
             </div>
          </div>
+         <div
+            style={
+               {
+                  backgroundColor: "#423F3A",
+                  height: "42px",
+                  width: "100%",
+                  marginTop: "-5px"
+               }
+            }
+         ></div>
       </>
    )
 }

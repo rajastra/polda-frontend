@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 const Header = () => {
@@ -12,10 +13,26 @@ const Header = () => {
          </div>
          <nav>
             <ul className='nav-list'>
-               <li className='list-item'><a href="">Beranda</a></li>
-               <li className='list-item'><a href="">Tentang</a></li>
-               <li className='list-item'><a href="">Galeri</a></li>
-               <li className='list-item'><a href="">Login</a></li>
+               <li className='list-item'><NavLink to="/"
+                  className={({ isActive }) =>
+                     isActive ? 'list-item-active' : undefined
+                  }
+                  end>Beranda</NavLink></li>
+               <li className='list-item'><NavLink to="/tentang"
+                  className={({ isActive }) =>
+                     isActive ? 'list-item-active' : undefined
+                  }
+                  end>Tentang</NavLink></li>
+               <li className='list-item'><NavLink to="/galeri"
+                  className={({ isActive }) =>
+                     isActive ? 'list-item-active' : undefined
+                  }
+                  end>Galeri</NavLink></li>
+               <li className='list-item'><NavLink to="/login"
+                  className={({ isActive }) =>
+                     isActive ? 'list-item-active' : undefined
+                  }
+                  end>Login</NavLink></li>
             </ul>
          </nav>
       </header>
