@@ -33,7 +33,14 @@ const Login = () => {
          <Header />
          <div className="login-container">
             <div>
-               <img src={imageLogin} alt="gambar login" />
+               <img src={imageLogin} alt="gambar login" style={
+                  {
+                     width: "100%",
+                     height: "100%",
+                     objectFit: "cover",
+                     objectPosition: "center"
+                  }
+               } />
             </div>
             <div className="login-form">
                <h1 className="login-text">Login</h1>

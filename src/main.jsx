@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import './index.css'
 import { router } from './Router';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 
 
 
