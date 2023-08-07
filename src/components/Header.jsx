@@ -7,8 +7,8 @@ const Header = () => {
          <div className='logo-box'>
             <img src={logo} alt="logo" className='logo-img' />
             <div className='logo-text'>
-               <p>DITSAMAPTA</p>
-               <p>POLDA LAMPUNG</p>
+               <p className='logo-text-heading'>DITSAMAPTA</p>
+               <p className='logo-text-secondary'>POLDA LAMPUNG</p>
             </div>
          </div>
          <nav>

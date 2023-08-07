@@ -3,10 +3,12 @@ import imageLogin from '../assets/image-login.png'
 import { Button, Form, Input, message } from 'antd';
 import useHttp from "../hooks/use-http";
 import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
    const [form] = Form.useForm();
    const { isLoading, sendRequest } = useHttp();
+   const navigate = useNavigate();
 
    const handleSubmit = async () => {
       try {
@@ -20,7 +22,7 @@ const Login = () => {
                Cookies.set("token", data.token);
                Cookies.set("email", data.data.user.email);
                message.success("Login berhasil");
-               // navigate("/dashboard");
+               navigate("/dashboard/ubah-galeri");
             }
          )
       } catch (error) {
@@ -68,7 +70,8 @@ const Login = () => {
                   backgroundColor: "#423F3A",
                   height: "42px",
                   width: "100%",
-                  marginTop: "-5px"
+                  marginTop: "-5px",
+                  zIndex: "-1"
                }
             }
          ></div>

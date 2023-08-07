@@ -84,7 +84,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-between;
-  background-color: #000;
+  background: linear-gradient(0deg, #423f3a 0%, #423f3a 100%), #ababab;
   align-items: last baseline;
 }
 .list-down {

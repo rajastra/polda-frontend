@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #810034;
+  background: linear-gradient(0deg, #810034 0%, #810034 100%), #ababab;
   padding: 0 20px;
 }
 
@@ -22,6 +22,27 @@ body {
   display: flex;
   align-items: center;
   color: #fff7dc;
+  gap: 17px;
+}
+
+.logo-text-heading {
+  color: #fff7dc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logo-text-secondary {
+  color: #fff7dc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .logo-img {
@@ -43,6 +64,13 @@ body {
 .list-item a {
   text-decoration: none;
   color: #fff7dc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .list-item a:hover {
@@ -66,8 +94,16 @@ body {
 }
 
 .login-text {
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
   font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .btn-container {
@@ -97,4 +133,50 @@ body {
   background: #f9f9f9;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
     0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard-title {
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.nama-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-heading {
+  color: #fff7dc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-secondary {
+  color: #fff7dc;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Kadwa;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-info {
+  color: #fff;
+  font-family: Kadwa;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
