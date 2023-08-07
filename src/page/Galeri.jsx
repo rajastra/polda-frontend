@@ -1,9 +1,38 @@
 import './Galeri.css'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import keg1 from '../assets/keg1.jpg'
+import { useCallback, useEffect, useState } from 'react'
+import useHttp from '../hooks/use-http'
+import { Skeleton } from 'antd'
 
 const Galeri = () => {
+   const { isLoading, sendRequest } = useHttp();
+   const [galeriData, setGaleriData] = useState([]);
+   // const [query, setQuery] = useState('')
+
+
+
+   const getGaleri = useCallback(async () => {
+      try {
+         sendRequest({
+            url: "/api/v1/kegiatan",
+            method: "GET",
+         },
+            (data) => {
+               setGaleriData(data.data);
+            }
+         )
+      } catch (error) {
+         console.log(error);
+      }
+   }, [sendRequest])
+
+
+   useEffect(() => {
+      getGaleri();
+   }, [getGaleri])
+
+
    return (
       <>
          <Header />
@@ -15,33 +44,24 @@ const Galeri = () => {
                   <button>Cari</button>
                </div>
             </div>
-            <div className='kegiatan-list'>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
+            {isLoading ? (
+               <Skeleton active style={
+                  {
+                     marginTop: "50px",
+                  }
+               } />
+            ) : (
+               <div className='kegiatan-list'>
+                  {galeriData?.map((galeri) => {
+                     return (
+                        <div className='kegiatan-box' key={galeri.id}>
+                           <img src={galeri.photo_url} alt="" className='kegiatan-img' />
+                           <p className='kegiatan-text'>{galeri.title}</p>
+                        </div>
+                     )
+                  })}
                </div>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
-               </div>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
-               </div>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
-               </div>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
-               </div>
-               <div className='kegiatan-box'>
-                  <img src={keg1} alt="" className='kegiatan-img' />
-                  <p className='kegiatan-text'>Kegiatan 1</p>
-               </div>
-
-            </div>
+            )}
          </main>
          <Footer />
       </>

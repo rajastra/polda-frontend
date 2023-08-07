@@ -10,8 +10,8 @@ const DashboardLayout = (props) => {
             <div className='logo-box'>
                <img src={logo} alt="logo" className='logo-img' />
                <div className='logo-text'>
-                  <p>M</p>
-                  <p>Lampung</p>
+                  <p className='shabara-text1'>Shabara</p>
+                  <p className='shaara-text2'>Lampung</p>
                </div>
             </div>
             <nav>
