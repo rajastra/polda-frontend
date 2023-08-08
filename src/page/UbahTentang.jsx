@@ -44,7 +44,6 @@ const UbahTentang = () => {
 
 
    const onCancelModal = () => {
-      form.resetFields();
       setNewData({});
    };
 
@@ -105,7 +104,7 @@ const UbahTentang = () => {
    return (
       <DashboardLayout>
          <div className='dashboard-container'>
-            <h1 className='dashboard-title'>Ubah Galeri</h1>
+            <h1 className='dashboard-title'>Ubah Tentang</h1>
             {isLoading && <Skeleton active style={{
                marginTop: '50px'
             }} />}
