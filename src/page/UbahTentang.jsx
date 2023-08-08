@@ -45,6 +45,12 @@ const UbahTentang = () => {
 
    const onCancelModal = () => {
       setNewData({});
+      setFileList([{
+         uid: '-1',
+         name: 'image.png',
+         status: 'done',
+         url: tentang.photo_url,
+      }])
    };
 
    const handleSubmit = async () => {
