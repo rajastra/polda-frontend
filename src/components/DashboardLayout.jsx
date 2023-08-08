@@ -1,5 +1,5 @@
 import './DashboardLayout.css'
-import logo from '../assets/logo (1).png'
+import logo from '../assets/logo3.png'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import { message } from 'antd'
