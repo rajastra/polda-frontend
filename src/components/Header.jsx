@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import Cookies from 'js-cookie'
 
 const Header = () => {
+   const isLogin = Cookies.get('token');
+
    return (
       <header className='header'>
          <div className='logo-box'>
@@ -28,11 +31,16 @@ const Header = () => {
                      isActive ? 'list-item-active' : undefined
                   }
                   end>Galeri</NavLink></li>
-               <li className='list-item'><NavLink to="/login"
+               {!isLogin && <li className='list-item'><NavLink to="/login"
                   className={({ isActive }) =>
                      isActive ? 'list-item-active' : undefined
                   }
-                  end>Login</NavLink></li>
+                  end>Login</NavLink></li>}
+               {isLogin && <li className='list-item'><NavLink to="/dashboard/ubah-beranda"
+                  className={({ isActive }) =>
+                     isActive ? 'list-item-active' : undefined
+                  }
+                  end>Dashboard</NavLink></li>}
             </ul>
          </nav>
       </header>

@@ -22,7 +22,7 @@ const Login = () => {
                Cookies.set("token", data.token);
                Cookies.set("email", data.data.user.email);
                message.success("Login berhasil");
-               navigate("/dashboard/ubah-galeri");
+               navigate("/dashboard/ubah-beranda");
             }
          )
       } catch (error) {

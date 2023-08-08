@@ -24,8 +24,11 @@ const useHttp = () => {
         const data = response.data;
         applyData(data);
       } catch (err) {
-        const error = err.response.data.message;
-        message.error(error);
+        let msg = 'Something went wrong!';
+        if (err.response?.data?.message) {
+          msg = err.response.data.message;
+        }
+        message.error(msg);
       }
       setIsLoading(false);
     },

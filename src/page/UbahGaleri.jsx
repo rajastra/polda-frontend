@@ -57,7 +57,11 @@ const UbahGaleri = () => {
          <div className='dashboard-container'>
             <h1 className='dashboard-title'>Ubah Galeri</h1>
             {isLoading ? (
-               <Skeleton active />
+               <Skeleton style={
+                  {
+                     marginTop: "50px"
+                  }
+               } active />
             ) : (
 
                galeriData?.map((galeri) => {

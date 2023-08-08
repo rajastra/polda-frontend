@@ -1,9 +1,20 @@
 import './DashboardLayout.css'
 import logo from '../assets/logo (1).png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import Cookies from 'js-cookie'
+import { message } from 'antd'
 
 
 const DashboardLayout = (props) => {
+   const navigation = useNavigate();
+
+   const logout = () => {
+      Cookies.remove('token')
+      Cookies.remove('email')
+      navigation('/')
+      message.success('Berhasil logout')
+   }
+
    return (
       <div>
          <header className='header'>
@@ -21,11 +32,15 @@ const DashboardLayout = (props) => {
                         isActive ? 'list-item-active' : undefined
                      }
                      end>Preview</NavLink></li>
-                  <li className='list-item'><NavLink to="/tentang"
+                  <li onClick={logout} className='list-item' style={
+                     {
+                        cursor: 'pointer'
+                     }
+                  }><a
                      className={({ isActive }) =>
                         isActive ? 'list-item-active' : undefined
                      }
-                     end>Logout</NavLink></li>
+                     end>Logout</a></li>
                </ul>
             </nav>
          </header>
