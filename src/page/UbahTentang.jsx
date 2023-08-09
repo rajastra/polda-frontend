@@ -45,12 +45,6 @@ const UbahTentang = () => {
 
    const onCancelModal = () => {
       setNewData({});
-      setFileList([{
-         uid: '-1',
-         name: 'image.png',
-         status: 'done',
-         url: tentang.photo_url,
-      }])
    };
 
    const handleSubmit = async () => {
@@ -70,8 +64,8 @@ const UbahTentang = () => {
             (data) => {
                console.log(data)
                message.success("Berhasil Mengubah Beranda");
-               getTentang();
                onCancelModal();
+               getTentang();
             }
          )
       } catch (errorInfo) {
